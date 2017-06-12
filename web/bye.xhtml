@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets">
+<ui:composition template="/template/mylayout.xhtml">
+<ui:define name="content">
+<f:view>
+<h1>
+<h:outputText value="#{messages.bye}" />
+</h1>
+<h:form>
+    <p>
+<h:commandLink action="bye">Bye</h:commandLink>
+</p>
+<p>
+<h:commandLink action="hello">Hello</h:commandLink>
+</p>
+<h:outputText> | </h:outputText>
+<p>
+<h:link outcome="hellov2">Hellov2</h:link>
+</p>
+<p>
+<h:link outcome="hellov3">Hellov3</h:link>
+</p>
+<p>
+<h:link outcome="hellov4">Hellov4</h:link>
+</p>
+<p>
+<h:commandLink action="home" value="Nouveau chemin pour l'index" />
+</p>
+
+<p>
+<h:link outcome="counters">ManageBean Pour counters</h:link>
+</p>
+
+<p>
+<h:commandButton action="#{navigation.hello}"
+value="Controller to Hello utilisation de navigation" />
+</p>
+
+<p>
+<h:commandButton action="#{counter.inc}" value="#{counter.value}" />
+</p>
+</h:form>
+
+</f:view>
+</ui:define>
+</ui:composition>
+</html>
