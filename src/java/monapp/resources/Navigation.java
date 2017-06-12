@@ -5,12 +5,14 @@
  */
 package monapp.resources;
 
-import javax.inject.Named;
-import javax.enterprise.context.Dependent;
 import javax.faces.bean.ManagedBean;
+
 @ManagedBean
-public class Navigation {
-public String hello() {
-return "hello";
-}
+public class Navigation
+{
+
+    public String hello()
+    {
+        return "hello";
+    }
 }
